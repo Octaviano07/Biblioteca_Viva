@@ -12,8 +12,7 @@ if (btn) {
 // Perfil foto
 //======================
 window.onload = () => {
-    document.getElementById("autorImg").src =
-        "img/" + dados.imagemAutor;
+    document.getElementById("autorImg").src = dados.imagemAutor;
 };
 
 
