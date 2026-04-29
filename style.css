@@ -1,0 +1,160 @@
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
+:root {
+    --azul: #1e2a3a;
+    --azul-claro: #2c3e50;
+    --castanho: #8b5e3c;
+    --castanho-suave: #a6764d;
+    --texto: #e6e6e6;
+    --texto-suave: #cfcfcf;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--azul);
+    color: var(--texto);
+    padding: 20px;
+    margin: 0;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* animação suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    margin-bottom: 40px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* =========================
+   AVATAR
+========================= */
+.autor-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--castanho);
+    box-shadow: 0 0 10px rgba(139, 94, 60, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.autor-img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   HERO (FRASE CENTRAL)
+========================= */
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--texto-suave);
+    padding: 20px;
+}
+
+/* =========================
+   CARDS (BLOG)
+========================= */
+.card {
+    background: var(--azul-claro);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border-left: 4px solid var(--castanho);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* links dentro dos cards */
+.card a {
+    color: var(--castanho-suave);
+    text-decoration: none;
+}
+
+/* =========================
+   BOTÃO WHATSAPP
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: var(--castanho);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--castanho-suave);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1, h2 {
+    color: var(--texto);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 600px) {
+
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero {
+        font-size: 20px;
+        height: auto;
+        padding: 40px 0;
+    }
+   
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
