@@ -273,15 +273,6 @@ textarea {
     resize: none;
 }
 
-/* =========================
-   SOBRE
-========================= */
-#sobre {
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0,0,0,0.2);
-    border-radius: 12px;
-}
 
 /* =========================
    FOOTER
@@ -290,7 +281,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    background: #111;
+    background: #C0C0C0;
     border-radius: 10px;
 }
 
