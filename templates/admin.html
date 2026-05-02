@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Painel Admin</h1>
+
+<div class="admin-actions">
+
+    <a href="/create" class="btn btn-primary">
+        ➕ Criar Post
+    </a>
+
+    <a href="/logout" class="btn btn-danger">
+        🚪 Sair
+    </a>
+
+</div>
+
+{% for p in posts %}
+
+<div class="card post-card">
+
+    <div class="post-header">
+
+        <div>
+            <h3>{{ p[1] }}</h3>
+            <small>{{ p[2] }}</small>
+        </div>
+
+        <!-- MENU -->
+        <div class="menu-wrapper">
+
+            <button class="menu-btn" onclick="toggleMenu(this)">⋮</button>
+
+            <div class="menu-dropdown">
+                <a href="/edit/{{ p[0] }}">✏️ Editar</a>
+                <a href="/delete/{{ p[0] }}" onclick="return confirm('Apagar este post?')">
+                    🗑️ Apagar
+                </a>
+            </div>
+
+        </div>
+
+    </div> <!-- post-header -->
+
+</div> <!-- post-card -->
+
+{% endfor %}
+{% endblock %}

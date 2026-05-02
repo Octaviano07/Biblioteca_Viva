@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Login Admin</h2>
+
+<form method="POST" action="/login">
+
+    <input type="text" name="username" placeholder="Usuário"><br><br>
+
+    <input type="password" name="password" placeholder="Senha"><br><br>
+
+    <button type="submit">Entrar</button>
+
+</form>
+
+{% endblock %}

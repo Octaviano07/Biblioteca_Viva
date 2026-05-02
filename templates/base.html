@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <h2>Biblioteca Viva</h2>
+
+    <div>
+
+        <a href="/">Home</a>
+        <a href="/sobre">Sobre</a>
+        <a href="mailto:autor@gmail.com">Contacto</a>
+
+        <!-- DARK MODE BUTTON -->
+        <button class="btn" onclick="toggleTheme()">🌙</button>
+
+        {% if session.get("admin") %}
+            <a href="/admin">Painel</a>
+            <a href="/logout">Sair</a>
+        {% endif %}
+
+    </div>
+
+</nav>
+
+<!-- CONTEÚDO -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    <a href="/login">©2026 Todos os direitos reservados</a>
+</footer>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
