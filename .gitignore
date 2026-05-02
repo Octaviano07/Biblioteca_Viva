@@ -1,0 +1,9 @@
+# Ignorar variáveis de ambiente
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Arquivos do sistema
+.DS_Store
